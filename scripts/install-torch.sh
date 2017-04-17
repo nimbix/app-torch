@@ -29,3 +29,7 @@ if [ -z "${LUAROCKS}" ]; then
 fi
 
 echo ". /usr/local/torch/install/bin/torch-activate" | sudo tee -a /etc/skel/.bashrc
+
+source /etc/skel/.bashrc && \
+    luarocks install cutorch && \
+    luarocks install cunn
