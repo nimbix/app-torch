@@ -30,6 +30,7 @@ fi
 
 echo ". /usr/local/torch/install/bin/torch-activate" | sudo tee -a /etc/skel/.bashrc
 
-source /etc/skel/.bashrc && \
+. /usr/local/torch/install/bin/torch-activate && \
     luarocks install cutorch && \
-    luarocks install cunn
+    luarocks install cunn && \
+    luarocks install cudnn
